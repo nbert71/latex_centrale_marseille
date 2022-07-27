@@ -1,0 +1,164 @@
+\documentclass{rapportECM}
+
+% --- Liste des packages supplémentaires --- %
+\usepackage{lipsum}
+% ------------------------------------------ %
+
+\begin{document}
+
+% ------------------------------------------
+%         Informations sur le rapport
+% ------------------------------------------
+\entreprise{Nom entreprise}
+\logoentreprise{logos/entreprise.png} % Logo de l'entreprise
+
+\titre{Titre de la mission} % Titre du fichier
+
+\rendu{Rapport de stage de fin d'étude} % Nom du rendu
+
+\eleve{Prénom Nom}
+\PE{2020} % Promo entrante
+
+\annee{3\textsuperscript{ème} année} % Année
+\master{Master trop stylé} % Nom du master si besoin
+\filiere{Filiere qui déchire tout} % Nom de la filière
+
+
+\dates{date début - date fin}
+
+% Informations tuteurs écoles
+\tuteurecole{
+  \textsc{Prénom Nom} \\
+  prenom.nom@centrale-marseille.fr \\
+} 
+
+\tuteurentreprise{
+  \textsc{Prénom Nom} \\
+  prenom.nom@entreprise.fr \\
+}
+
+% ------------------------------------------
+%               Initialisation
+% ------------------------------------------
+\fairemarges
+\fairepagedegarde
+
+%permet de laisser une page blanche après la page de garde
+\pageblanche
+
+% ------------------------------------------
+%              Corps du document
+% ------------------------------------------
+
+% --- Table des matieres --- %
+\tabledesmatieres
+
+% --- Remerciements --- %
+\ajoutsommaire{section}{Remerciements}
+\pagestyle{remerciements} % permet d'écrire "Remerciements" dans l'en-tête
+
+\vspace*{\stretch{1}}
+\begin{center}
+  \renewcommand{\abstractname}{Remerciements}
+	\begin{abstract}
+    \lipsum[1-2]
+  \end{abstract}
+\end{center}
+\vspace*{\stretch{1}}
+\newpage
+
+
+% --- Résumé --- %
+\ajoutsommaire{section}{Résumé}
+\pagestyle{resumeabstract} % permet d'écrire "Résumé & Abstract" dans l'en-tête
+
+\vspace*{\stretch{1}}
+\begin{center}
+  \renewcommand{\abstractname}{Résumé}
+	\begin{abstract}
+    \lipsum[1-2]
+  \end{abstract}
+\end{center}
+\vspace*{\stretch{1}}
+
+% --- Abstract --- % 
+\ajoutsommaire{section}{Abstract}
+\vspace*{\stretch{1}}
+\begin{center}
+  \renewcommand{\abstractname}{Abstract}
+	\begin{abstract}
+    \lipsum[1-2]
+  \end{abstract}
+\end{center}
+\vspace*{\stretch{1}}
+
+\newpage
+
+% --- Introduction --- %
+\ajoutsommaire{section}{Introduction}
+\pagestyle{introduction} % permet d'écrire "Introduction" dans l'en-tête
+
+\section*{Introduction}
+\lipsum[2-3]
+\newpage
+\pagestyle{document}
+
+% --- Contenu --- %
+
+\section{Première section}
+
+\lipsum[3-4]
+
+\subsection{Sous partie}
+
+\lipsum[3-4]
+
+\section{Deuxième section}
+
+\lipsum[2-5]
+
+\section{Quelques commandes}
+
+\insererfigure{images/centrale-photo.jpg}{7cm}{Une photo de notre école}{mediatheque}
+% 1- Chemin vers l'image
+% 2- Hauteur de l'image
+% 3- Légénde sous l'image
+% 4- Label associé à l'image pour pouvoir la citer
+
+Ici je cite la figure \ref{fig: mediatheque} qui se trouve sur la page \pageref{fig: mediatheque}.\\
+
+Ici je cite l'article \cite{Debauche2021}.
+
+\ajoutsommaire{section}{Conclusion}
+\section*{Conclusion}
+\lipsum[1-2]
+
+% ------------------------------------------
+%                 Glossaire
+% ------------------------------------------
+\newpage
+\pagestyle{glossaire}
+\ajoutsommaire{section}{Glossaire}
+\section*{Glossaire}
+\input{glossaire.tex}
+\pagebreak
+
+% ------------------------------------------
+%                Bibliographie
+% ------------------------------------------
+\newpage
+\pagestyle{biblio}
+\ajoutsommaire{section}{Bibliographie}
+\section*{Bibliographie}
+\printbibliography[ heading = none]
+\pagebreak
+
+% ------------------------------------------
+%                   Annexes
+% ------------------------------------------
+\section*{Annexes}
+\pagestyle{annexes}
+\initannexes
+\input{annexes.tex}
+
+\end{document}
