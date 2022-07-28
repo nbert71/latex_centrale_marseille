@@ -4,7 +4,9 @@ Ce template LaTeX est a destination des élèves de l'école centrale de Marseil
 
 Voici un petit aperçu de la page de garde. Vous pouvez voir le fichier complet en cliquant sur ``main.pdf``.
 
-![](images/photo-page-garde.png)
+<p align="center">
+  <img src="images/photo-page-garde.png" />
+</p>
 
 ## Installation
 
