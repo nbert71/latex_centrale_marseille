@@ -22,7 +22,6 @@
 \RequirePackage{float}
 \RequirePackage{wallpaper} % Pour insérer une image en background
 \RequirePackage{url}
-\RequirePackage[dvipsnames]{xcolor}
 
 
 \RequirePackage{fancyhdr} % Pour le style global du document
@@ -184,6 +183,12 @@
     \label{fig: #4}
   \end{figure}
 }
+
+% Permet de faire démarrer le compteur des figures à 1
+\newcommand{\initfigures}{
+    \addtocounter{figure}{-1}:
+}
+
 % Ajoute un item dans le glossaire
 \newcommand{\itemglos}[2]{
   \item \textbf{#1} : #2
