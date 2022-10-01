@@ -4,6 +4,7 @@
 
 % --- Liste des packages supplémentaires --- %
 \usepackage{lipsum}
+\usepackage{esint}
 
 % ------------------------------------------ %
 
@@ -133,15 +134,25 @@
 
 \section{Quelques commandes}
 
-\insererfigure{images/centrale-photo.jpg}{7cm}{Une photo de notre école}{mediatheque}
+\insererfigure{images/centrale-photo.jpg}{0.6\textwidth}{Une photo de notre école}{mediatheque}
 % 1- Chemin vers l'image
-% 2- Largeur de l'image
+% 2- Hauteur de l'image (7cm ou bien 0.6\textwidth ==>60%)
 % 3- Légénde sous l'image
 % 4- Label associé à l'image pour pouvoir la citer
+
+
 
 Ici je cite la figure \ref{fig: mediatheque} qui se trouve sur la page \pageref{fig: mediatheque}.\\
 
 Ici je cite l'article \cite{Debauche2021}.
+
+Ici j'écris une équation en mode ligne $\int_0^{+\infty} e^{-x^2} dx = \sqrt{\pi}$.
+
+Et là mon équation va être mise en valeur au centre de la page :
+
+$$
+\oiint_{\mathcal{S}} \vec{A} \cdot \vec{dS} = \iiint_{\mathcal{V}} \textrm{div}(\vec{A}) \, d\tau
+$$
 
 \ajoutsommaire{section}{Conclusion}
 \section*{Conclusion}
