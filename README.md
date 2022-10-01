@@ -42,8 +42,10 @@ Vous pourrez mettre vos images dans le dossier ``images``. Pour insérer l'image
 \insererfigure{images/chien.jpg}{7cm}{Voici la photo de mon chien}{mon_chien}
 ```
 
-(les paramètres dans l'ordre sont : le chemin vers l'image, la hauteur de l'image, la légende à insérer sous l'image, le label qui servira à citer l'image)
+(les paramètres dans l'ordre sont : le chemin vers l'image, la largeur de l'image, la légende à insérer sous l'image, le label qui servira à citer l'image)
+
+(vous pouvez aussi spécifier `0.8\textwidth` à la place d'une longeur, ici l'image prendra 80% de la largeur (0.8))
 
 ### Ajout dans le sommaire
 
-Quand vous utilisez une section étoilée (i.e. non numéotée) ``\section*{Section 2}``, celle-ci n'apparait dans la table des matières, il faut alors l'ajouter manuellement avec la commande suivante ``\ajoutsommaire{section}{Section 2}``, le premier paramètre correspondant au niveau du titre à ajouter (section, subsection ...)
+Quand vous utilisez une section étoilée (i.e. non numéotée) ``\section*{Section 2}``, celle-ci n'apparait dans la table des matières, il faut alors l'ajouter manuellement avec la commande suivante ``\ajoutsommaire{section}{Section 2}``, le premier paramètre correspondant au niveau du titre à ajouter (section, subsection ...) et le second au titre de la section.

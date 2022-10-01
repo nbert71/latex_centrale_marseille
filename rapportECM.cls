@@ -21,11 +21,14 @@
 \RequirePackage{subcaption}
 \RequirePackage{float}
 \RequirePackage{wallpaper} % Pour insérer une image en background
+\RequirePackage{url}
+\RequirePackage[dvipsnames]{xcolor}
+
 
 \RequirePackage{fancyhdr} % Pour le style global du document
 \RequirePackage[left=2.5cm,right=2.5cm,top=2cm,bottom=3.5cm]{geometry} % Pour gérer les marges du document
 
-\RequirePackage{biblatex} % Permet de gérer une bibliographie et de citer des articles
+\RequirePackage[sorting=none]{biblatex} % Permet de gérer une bibliographie et de citer des articles
 \addbibresource{main.bib}
 
 
@@ -74,7 +77,7 @@
   \rhead{\nouppercase{\leftmark}}
 }
 \fancypagestyle{remerciements}{
-  \rhead[R]{Remerciments}
+  \rhead[R]{Remerciements}
 }
 \fancypagestyle{resumeabstract}{
   \rhead[R]{Résumé \& Abstract}
@@ -174,9 +177,9 @@
 
 % Permet d'insérer une figure
 \newcommand{\insererfigure}[4]{
-  \begin{figure}[ht]
+  \begin{figure}[H]
     \centering
-    \includegraphics[height=#2]{#1}
+    \includegraphics[width=#2]{#1}
     \caption{#3}
     \label{fig: #4}
   \end{figure}
